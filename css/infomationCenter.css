@@ -1,0 +1,281 @@
+.w1200 .infomation{min-width: 1190px;border-bottom: 2px solid #08c;
+}
+.info-header
+{
+    height: 80px;
+
+
+    font-family: Microsoft Yahei;
+}
+.info-header .info-logo
+{
+    margin-top: 11px;
+
+    float: left;
+}
+.info-header .info-menu
+{
+    margin-top: 16px;
+    margin-right: 52px;
+
+    float: right;
+}
+.info-header .info-menu a
+{
+    font-family: Microsoft Yahei;
+
+    color: #000;
+}
+.info-header .current a
+{
+    color: #fff;
+}
+.info-header li
+{
+    margin-left: 10px;
+    padding: 23px 0;
+
+    float: left;
+
+    width: 148px;
+
+    text-align: center;
+}
+.info-header li.help-center
+{
+    background-image: url('//img.iblimg.com/respc-1/resources/v3.0/css/i/info-help.png');
+    background-repeat: no-repeat;
+    background-position: 25px 18px;
+}
+.info-header li.new-ad
+{
+    background-image: url('//img.iblimg.com/respc-1/resources/v3.0/css/i/info-new.png');
+    background-repeat: no-repeat;
+    background-position: 25px 18px;
+}
+.info-header li.about-our
+{
+    background-image: url('//img.iblimg.com/respc-1/resources/v3.0/css/i/info-us.png');
+    background-repeat: no-repeat;
+    background-position: 25px 18px;
+}
+.info-header  li.help-center-current
+{
+    background: #08c url('//img.iblimg.com/respc-1/resources/v3.0/css/i/header-icon.png') no-repeat 25px -98px;
+
+    color: #fff;
+}
+.info-header  li.current
+{
+    background-color: #08c;
+    background-position: 25px -27px;
+
+    color: #fff;
+}
+.info-header  li.about-our-current
+{
+    background: #08c url('//img.iblimg.com/respc-1/resources/v3.0/css/i/header-icon.png') no-repeat 25px -453px;
+
+    color: #fff;
+}
+.wrap-bg a:hover
+{
+    text-decoration: underline;
+}
+.wrap-bg
+{
+    background-color: #f5f5f5;
+
+    font-family: Microsoft Yahei;
+}
+.info-header  li:hover
+{
+    cursor: pointer;
+}
+.info-header li span
+{
+    margin-left: 1px;
+    margin-left: 15px;
+}
+.help-left
+{
+    padding-top: 24px;
+
+    float: left;
+
+    width: 200px;
+
+    background: #fff;
+
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+
+    color: #333;
+
+    text-align: center;
+}
+.help-left p
+{
+    padding-left: 29px;
+
+    height: 30px;
+    /* background: url('i/info-left-icon.png') no-repeat 30px 13px;*/
+
+    font-size: 14px;
+    line-height: 30px;
+
+    text-align: left;
+}
+.help-left p:hover
+{
+    cursor: pointer;
+}
+.help-left .current-header
+{
+    background: #eaeaea;
+}
+.help-left a
+{
+    color: #999;
+}
+.help-left .current
+{
+    color: #08c;
+}
+.help-left .menu_body
+{
+    margin-left: 29px;
+
+    width: 152px;
+
+    font-family: SimSun;
+
+    text-align: left;
+}
+.help-left ul
+{
+    padding-top: 10px;
+
+    width: 150px;
+
+    background: #fff;
+
+    font-size: 14px;
+
+    color: #333;
+
+    text-align: center;
+}
+.help-left ul li
+{
+    padding: 6px;
+
+    font-size: 12px;
+}
+.help-right
+{
+    margin-left: 10px;
+    padding-bottom: 20px;
+
+    float: left;
+
+    width: 980px;
+
+    background: #fff;
+    min-height: 314px;
+
+    font-family: Microsoft Yahei;
+}
+.help-right ul.crumb
+{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.help-right li
+{
+    margin-left: 10px;
+
+    float: left;
+
+    font-size: 16px;
+
+    color: #999;
+}
+.help-right li a
+{
+    font-size: 16px;
+
+    color: #999;
+}
+.help-right li i
+{
+    margin-left: 10px;
+}
+.help-right li.last-one
+{
+    color: #333;
+}
+.help-title
+{
+    margin-top: 33px;
+    margin-left: 20px;
+    padding-left: 46px;
+
+    width: 884px;
+    height: 34px;
+
+    background: #e8f5ff url('//img.iblimg.com/respc-1/resources/v3.0/css/i/help-center-1.png') no-repeat 0 0;
+
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    line-height: 34px;
+
+    color: #08c;
+}
+.help-right .detail
+{
+    margin-left: 40px;
+    width: 904px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+.help-right .detail p
+{
+    line-height:20px;
+}
+.new .new-list{
+    width: 1107px;
+}
+
+.info-block .help-list div.new-list-detail{float: left;}
+.info-block .help-list div.new-list-time{font-size: 14px;float: left;margin-left: 40px;}
+.info-block .help-list li a
+{
+    display: block;
+    overflow: hidden;
+
+    max-width: 900px;
+
+    font-size: 14px;
+
+    color: #777;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.info-block .help-list li
+{
+    margin: 10px 0;
+
+    float: none;
+}
+.w1200 .footer
+{
+    padding-top: 0;
+
+
+}
+.new .new-block-list{width: 1179px;}
+.new .new-title{background:#e8f5ff url('//img.iblimg.com/respc-1/resources/v3.0/css/i/detail-icon.png') no-repeat;width: 1084px;}
+
+.our .our-title{background:#e8f5ff url('//img.iblimg.com/respc-1/resources/v3.0/css/i/detail-icon.png') no-repeat;}

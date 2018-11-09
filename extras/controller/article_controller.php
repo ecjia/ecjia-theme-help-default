@@ -44,24 +44,15 @@
 //
 //  ---------------------------------------------------------------------------------
 //
+defined('IN_ECJIA') or exit('No permission resources.');
 /**
- * H5路由配置文件
+ * 分类控制器
  */
-return [
+class article_controller
+{
+    public static function init()
+    {
+        ecjia_front::$controller->display('article.dwt');
+    }
 
-    //文章
-    'article/help/init'                     => 'article_controller@init',   //帮助中心
-//    'article/about/init'                    => 'article_controller@init',  //网店信息
-//    'article/notice/init'                   => 'article_controller@init',   //平台公告
-
-
-    //文章祥情
-
-
-//    'article/help/search'                 => 'article_controller@search',
-//    'article/help/detail'               => 'article_controller@detail',
-//    'article/shop/detail'               => 'article_controller@shop_detail',
-//    'article/index/init'                => 'article_controller@article_index',  //发现首页
-//    'article/index/detail'              => 'article_controller@article_detail', //发现文章详情
-//    'article/index/ajax_article_list'   => 'article_controller@ajax_article_list', //获取分类下的文章
-];
+}

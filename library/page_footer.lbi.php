@@ -1,172 +1,101 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="footer-new">
-    <div class="footer-new-top">
-    	<div class="w w1200">
-            <div class="service-list">
-                <div class="service-item">
-                    <i class="f-icon f-icon-qi"></i>
-                    <span>七天包退</span>
+<div id="footer" class="footer">
+    <div class="helpnav clearfix">
+        <div class="wrap">
+            <div class="footer-center">
+                <div class="helpnav-list">
+                    <div class="helpnav-title">
+                        <i class="footic1"></i>
+                        新手入门
+                    </div>
+                    <ul>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=261&amp;&amp;categoryType=help" target="_blank">购物流程</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=262&amp;&amp;categoryType=help" target="_blank">会员介绍</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=263&amp;&amp;categoryType=help" target="_blank">常见问题</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=264&amp;&amp;categoryType=help" target="_blank">发票说明</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=265&amp;&amp;categoryType=help" target="_blank">联系客服</a></li>
+                    </ul>
                 </div>
-                <div class="service-item">
-                    <i class="f-icon f-icon-zheng"></i>
-                    <span>正品保障</span>
+                <div class="helpnav-list">
+                    <div class="helpnav-title">
+                        <i class="footic2"></i>
+                        配送服务
+                    </div>
+                    <ul>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=275&amp;&amp;categoryType=help" target="_blank">配送范围及运费</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=278&amp;&amp;categoryType=help" target="_blank">配送进度查询</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=276&amp;&amp;categoryType=help" target="_blank">自提服务</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=277&amp;&amp;categoryType=help" target="_blank">商品验货与签收</a></li>
+                    </ul>
                 </div>
-                <div class="service-item">
-                    <i class="f-icon f-icon-hao"></i>
-                    <span>好评如潮</span>
+                <div class="helpnav-list">
+                    <div class="helpnav-title">
+                        <i class="footic3"></i>
+                        支付方式
+                    </div>
+                    <ul>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=279&amp;&amp;categoryType=help" target="_blank">货到付款</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=280&amp;&amp;categoryType=help" target="_blank">在线支付</a></li>
+                    </ul>
                 </div>
-                <div class="service-item">
-                    <i class="f-icon f-icon-shan"></i>
-                    <span>闪电发货</span>
+                <div class="helpnav-list">
+                    <div class="helpnav-title">
+                        <i class="footic4"></i>
+                        售后服务
+                    </div>
+                    <ul>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=281&amp;&amp;categoryType=help" target="_blank">退换货政策</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=282&amp;&amp;categoryType=help" target="_blank">退换货流程</a></li>
+                        <li><a href="http://help.bl.com/articleDetailed.html?articleId=283&amp;&amp;categoryType=help" target="_blank">退款说明</a></li>
+                    </ul>
                 </div>
-                <div class="service-item">
-                    <i class="f-icon f-icon-quan"></i>
-                    <span>权威荣誉</span>
+                <div class="helpnav-list">
+                    <div class="helpnav-title">
+                        <i class="footic5"></i>
+                        商家支持
+                    </div>
+                    <ul>
+                        <li><a href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=382&amp;&amp;categoryType=help" target="_blank">商家入驻</a></li>
+                        <li><a href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=401&amp;&amp;categoryType=help" target="_blank">商家规则</a></li>
+                        <li><a href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=345&amp;&amp;categoryType=help" target="_blank">商家常见问题</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="contact">
-                <div class="contact-item contact-item-first"><i class="f-icon f-icon-tel"></i><span>{ecjia::config('service_phone')}</span></div>
             </div>
         </div>
     </div>
-
-<!--     <div class="footer-new-con"> -->
-<!--     	<div class="fnc-warp"> -->
-<!--             <div class="help-list"> -->
-<!--                 {foreach from=$helps item=help_cat name=no} -->
-<!--                 {if $smarty.foreach.no.iteration < 6} -->
-<!--                 <div class="help-item"> -->
-<!--                     <h3>{$help_cat.cat_name}</h3> -->
-<!--                     <ul> -->
-<!--                     {foreach from=$help_cat.article item=item name=help_cat} -->
-<!--                     {if $smarty.foreach.help_cat.iteration < 4} -->
-<!--                     <li><a href="{$item.url}"  title="{$item.title|escape:html}" target="_blank">{$item.short_title}</a></li> -->
-<!--                     {/if} -->
-<!--                     {/foreach} --> -->
-<!--                     </ul> -->
-<!--                 </dl> -->
-<!--                 </div> -->
-<!--                 {/if} -->
-<!--                 {/foreach}   -->
-<!--             </div> -->
-<!--             <div class="qr-code"> -->
-<!--                 <div class="qr-item qr-item-first"> -->
-<!--                     <div class="code_img"><img src="{$theme_url}images/temp/common/ecjia_qrcode.png"></div> -->
-<!--                     <div class="code_txt">ECJia</div> -->
-<!--                 </div> -->
-<!--                 <div class="qr-item"> -->
-<!--                     <div class="code_img"><img src="{$theme_url}images/temp/common/ectouch_qrcode.png"></div> -->
-<!--                     <div class="code_txt">ECTouch</div> -->
-<!--                 </div> -->
-<!--             </div> -->
-<!--     	</div> -->
-<!--     </div> -->
-
-	<div class="footer-new-con">
-		<div class="fnc-warp">
-			{if $help_list}
-			<div class="help-list">
-				<!-- {foreach from=$help_list key=key item=help} -->
-				{if $key lt 5}
-				<div class="help-item">
-					<h3>{$help.name} </h3>
-					{if $help.article}
-					<ul>
-						<!-- {foreach from=$help.article key=k item=h} -->
-						{if $k lt 3}
-						<li><a href="{RC_Uri::url('article/help/init')}&aid={$h.id}" title="{$h.title}" target="_blank">{$h.title}</a></li>
-						{/if}
-						<!-- {/foreach} -->
-					</ul>
-					{/if}
-				</div>
-				{/if}
-				<!-- {/foreach} -->
-			</div>
-			{/if}
-
-			<div class="qr-code">
-				<div class="qr-item qr-item-first">
-					<div class="code_img">
-						<img src="{RC_Upload::upload_url(ecjia::config('shop_wechat_qrcode'))}">
-					</div>
-					<div class="code_txt">
-						扫一扫关注
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="footer-new-bot">
-		<div class="w w1200">
-
-			{if $friendlink}
-			<p class="copyright_links">
-				{foreach from=$friendlink key=key item=v name=link}
-					<a href="{$v.link_url}" target="_blank" title="{$v.link_name}">
-						<img src="{$v.link_logo}" width="80" style="border-radius:2px;" />
-					</a>
-					{if !$smarty.foreach.link.last}
-					<span class="">&nbsp;</span>
-					{/if}
-				{/foreach}
-			</p>
-			{/if}
-
-			{if $shop_info}
-			<p class="copyright_links">
-				<!-- {foreach from=$shop_info key=key item=val name=shopinfo} -->
-				<a href="{RC_Uri::url('article/help/init')}&aid={$val.article_id}">{$val.title}</a>
-				{if !$smarty.foreach.shopinfo.last}
-				<span class="spacer"></span>
-				{/if}
-				<!-- {/foreach} -->
-			</p>
-			{/if}
-
-			<p>
-				{if ecjia::config('company_name')}{ecjia::config('company_name')} 版权所有{/if} {if ecjia::config('icp_number')}&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn" target="_blank"> {ecjia::config('icp_number')}</a>{/if}&nbsp;&nbsp;{ecjia::config('powered')}
-			</p>
-			<p class="copyright_auth">
-				&nbsp;
-			</p>
-		</div>
-	</div>
-
-    <!--优惠券领取弹窗-->
-    <div class="hide" id="pd_coupons">
-        <span class="success-icon m-icon"></span>
-        <div class="item-fore">
-            <h3>{$lang.Coupon_redemption_succeed}</h3>
-            <div class="txt ftx-03">{$lang.coupons_prompt}</div>
+    <div class="bottom-nav">
+        <div>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=285&amp;&amp;categoryType=about">关于我们</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=286&amp;&amp;categoryType=about">联系我们</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=287&amp;&amp;categoryType=about">加盟合作</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=288&amp;&amp;categoryType=about">诚征英才</a>
+            <span>|</span>
+            <a target="_blank" href="http://help.bl.com/articleDetailed.html?articleId=289&amp;&amp;categoryType=about">友情链接</a>
+            <span>|</span>
+            <a target="_blank" href="http://www.bl.com/newretail.html">新零售合作</a>
         </div>
-    </div>
-
-    <!--隐藏域-->
-    <div class="hidden">
-        <input type="hidden" name="seller_kf_IM" value="{$shop_information.is_IM}" rev="{$site_domain}" ru_id="{$merchant_id|default:0}" />
-        <input type="hidden" name="seller_kf_qq" value="{$basic_info.kf_qq}" />
-        <input type="hidden" name="seller_kf_tel" value="{$basic_info.kf_tel}" />
-        <input type="hidden" name="user_id" ectype="user_id" value="{if $user_id}{$user_id}{else}{$smarty.session.user_id|default:0}{/if}" />
+        <div class="copyright">百联集团有限公司版权所有 <span>|</span>  客服电话：400-900-8800  <span>|</span> 沪ICP备15028847号</div>
+        <a target="_blank" href="//res15.iblimg.com/respc-1/resources/v4.0/img/yaopingzigezheng.png" class="drug-message">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a><br>
+        <a target="_blank" href="http://promotion.bl.com/nc/PC_HDGL20180705000005986_6252.html" class="drug-message">全渠道增值电信业务经营许可证</a>
+        <div class="police">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002366" target="_blank">
+                <img src="//res12.iblimg.com/respc-1/resources/v4.0/css/i/gongan.png">
+                <span style="">沪公网安备  31010102002366号</span>
+            </a>
+            <a href="http://shwg.dianping.com" target="_blank">
+                <img src="//res13.iblimg.com/respc-1/resources/v4.1/widget/footer1200/i/wangjing.png">
+                <span style="">网购大家评</span>
+            </a>
+            <a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020160729145737000001099658-SAIC_SHOW_310000-20160406145114141192&amp;signData=MEYCIQCUhx+ulQL4t9jJgfgCH1oeTxexuWOVww3Hel3/UlRyLQIhAO2fVtZDl0EkYb0p/3M50cXqe694wDQoJNuUKNdQNOWf" target="_blank">
+                <img src="//res14.iblimg.com/respc-1/resources/v4.1/widget/footer1200/i/gongs.png" width="20" height="21">
+                <span style="">上海工商</span>
+            </a>
+            <a target="_blank" href="http://promotion.bl.com/nc/PC_HDGL20170407000001552_1592.html">
+                <img src="//res15.iblimg.com/respc-1/resources/v4.1/widget/footer1200/i/zhizhao.png">
+                <span style="">经营执照</span>
+            </a>
+        </div>
     </div>
 </div>
-
-<script type="text/jscript" src="{$theme_url}js/suggest.js"></script>
-<script type="text/jscript" src="{$theme_url}js/scroll_city.js"></script>
-<script type="text/jscript" src="{$theme_url}js/utils.js"></script>
-
-<!-- {if $site_domain} -->
-{if $area_htmlType neq 'goods' && $area_htmlType neq 'exchange'}
-	<script type="text/javascript" src="{$theme_url}js/warehouse_area.js"></script>
-{else}
-	<script type="text/javascript" src="{$theme_url}js/warehouse.js"></script>
-{/if}
-<!-- {else} -->
-{insert_scripts files='warehouse.js,warehouse_area.js'}
-<!-- {/if} -->
-
-{if $suspension_two}
-<script>var seller_qrcode='<img src="{$site_domain}{$seller_qrcode_img}" alt="{$seller_qrcode_text}" width="164" height="164">'; //by wu</script>
-{$suspension_two}
-{/if}
