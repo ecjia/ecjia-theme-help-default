@@ -44,24 +44,35 @@
 //
 //  ---------------------------------------------------------------------------------
 //
-/**
- * H5路由配置文件
+defined('IN_ECJIA') or exit('No permission resources.');
+/*
+ * Smarty plugin
+ * -------------------------------------------------------------
+ * File:     insert.page_footer.php
+ * Type:     insert
+ * Name:     page_header
+ * Purpose:  显示首页
+ * -------------------------------------------------------------
  */
-return [
+function smarty_insert_page_footer($params, Smarty_Internal_Template $template) {
 
-    //文章
-    'article/help/init'                     => 'article_controller@init',   //帮助中心
-//    'article/about/init'                    => 'article_controller@about',  //网店信息
-//    'article/notice/init'                   => 'article_controller@init',   //平台公告
+    $help_list = ecjia_api_manager::make()->api(ecjia_api_const::SHOP_HELP)->run();
+    $help_list = is_ecjia_error($help_list) ? [] : $help_list;
 
+    ecjia_front::$controller->assign('help_list', $help_list); //底部帮助
 
-    //文章祥情
+    $shop_info = RC_DB::table('article')->select('article_id', 'title')->where('cat_id', 0)->where('article_type', 'shop_info')->orderby('article_id', 'asc')->get();
+    ecjia_front::$controller->assign('shop_info', $shop_info);
 
+	//获取友情链接数据
+    $friendlink = RC_Api::api('friendlink', 'friendlink_list', ['type' => 'logo']);
+    $friendlink = is_ecjia_error($friendlink) ? [] : $friendlink;
 
-//    'article/help/search'                 => 'article_controller@search',
-//    'article/help/detail'               => 'article_controller@detail',
-//    'article/shop/detail'               => 'article_controller@shop_detail',
-//    'article/index/init'                => 'article_controller@article_index',  //发现首页
-//    'article/index/detail'              => 'article_controller@article_detail', //发现文章详情
-//    'article/index/ajax_article_list'   => 'article_controller@ajax_article_list', //获取分类下的文章
-];
+ 	ecjia_front::$controller->assign('friendlink', $friendlink);
+
+    $val = ecjia_front::$controller->fetch('library/page_footer.lbi');
+
+    return $val;
+}
+
+// end

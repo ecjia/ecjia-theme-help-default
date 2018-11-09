@@ -44,24 +44,35 @@
 //
 //  ---------------------------------------------------------------------------------
 //
-/**
- * H5路由配置文件
+defined('IN_ECJIA') or exit('No permission resources.');
+/*
+ * Smarty plugin
+ * -------------------------------------------------------------
+ * File:     insert.page_header.php
+ * Type:     insert
+ * Name:     page_header
+ * Purpose:  显示首页
+ * -------------------------------------------------------------
  */
-return [
+function smarty_insert_page_header($params, Smarty_Internal_Template $template) {
+    $shop_logo = ecjia::config('shop_logo');
+    $theme_url = RC_Theme::get_template_directory_uri() . '/';
 
-    //文章
-    'article/help/init'                     => 'article_controller@init',   //帮助中心
-//    'article/about/init'                    => 'article_controller@about',  //网店信息
-//    'article/notice/init'                   => 'article_controller@init',   //平台公告
+    $disk = RC_Filesystem::disk();
+    if (!empty($shop_logo) && $disk->exists(RC_Upload::upload_path($shop_logo))) {
+        $shop_logo = RC_Upload::upload_url($shop_logo);
+    } else {
+    	$shop_logo = $theme_url . "images/shop_logo.png";
+    }
+    ecjia_front::$controller->assign('shop_logo', $shop_logo);
+    ecjia_front::$controller->assign('search_keywords', ecjia::config('search_keywords'));
 
+    $cat_list = RC_DB::table('category')->where('is_show', 1)->where('parent_id', 0)->orderBy('sort_order', 'asc')->orderBy('cat_id', 'desc')->limit(6)->get();
+    ecjia_front::$controller->assign('cat_list', $cat_list);
 
-    //文章祥情
+    $val = ecjia_front::$controller->fetch('library/page_header.lbi');
 
+    return $val;
+}
 
-//    'article/help/search'                 => 'article_controller@search',
-//    'article/help/detail'               => 'article_controller@detail',
-//    'article/shop/detail'               => 'article_controller@shop_detail',
-//    'article/index/init'                => 'article_controller@article_index',  //发现首页
-//    'article/index/detail'              => 'article_controller@article_detail', //发现文章详情
-//    'article/index/ajax_article_list'   => 'article_controller@ajax_article_list', //获取分类下的文章
-];
+// end

@@ -52,6 +52,56 @@ class article_controller
 {
     public static function init()
     {
+
+        $article_id = intval($_GET['aid']);
+
+        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
+
+        if (!ecjia_front::$controller->is_cached('article.dwt', $cache_id)) {
+            $shop_help = ecjia_api_manager::make()->api(ecjia_api_const::SHOP_HELP)->run();
+            if (!is_ecjia_error($shop_help)) {
+                ecjia_front::$controller->assign('shop_help', $shop_help);
+            }
+
+            if(empty($article_id)) {
+                $article_id = head($shop_help[0]['article'])['id'];
+            }
+
+            $shop_help_detail = RC_Api::api('article', 'article_info', array('id' => $article_id));
+
+            ecjia_front::$controller->assign('aid',     $article_id);
+            ecjia_front::$controller->assign('article', $shop_help_detail);
+
+            ecjia_front::$controller->assign_title('帮助中心');
+        }
+//        _dump($shop_info,1);
+        ecjia_front::$controller->display('article.dwt');
+    }
+
+    public static function about()
+    {
+        $article_id = intval($_GET['aid']);
+
+        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
+
+        if (!ecjia_front::$controller->is_cached('article.dwt', $cache_id)) {
+            $shop_info = ecjia_api_manager::make()->api(ecjia_api_const::SHOP_INFO)->run();
+            if (!is_ecjia_error($shop_info)) {
+                ecjia_front::$controller->assign('shop_info', $shop_info);
+            }
+
+            if(empty($article_id)) {
+                $article_id = head($shop_info)['id'];
+            }
+
+            $shop_info_detail = RC_Api::api('article', 'article_info', array('id' => $article_id));
+
+            ecjia_front::$controller->assign('aid',     $article_id);
+            ecjia_front::$controller->assign('article', $shop_info_detail);
+
+            ecjia_front::$controller->assign_title('帮助中心');
+        }
+
         ecjia_front::$controller->display('article.dwt');
     }
 
