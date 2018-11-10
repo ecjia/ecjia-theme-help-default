@@ -62,11 +62,18 @@
                     <ul class="crumb clearfix">
                         <li><a href="#">帮助中心</a> <i>&gt;</i></li>
 
-                        <li id="help_one" class="last-one">支付方式<i>&gt;</i></li>
+                    <!-- {foreach $shop_help as $shop_help_cat} -->
+                        <!-- {foreach $shop_help_cat.article as  $shop_help_child_cat} -->
+                        {if $shop_help_child_cat.id eq $aid}
+                        <li id="help_one" class="last-one">{$shop_help_cat.name}<i>&gt;</i></li>
+                        <li id="help_one" class="last-one">{$shop_help_child_cat.title}</li>
+                        {/if}
+                        <!-- {/foreach} -->
+                    <!-- {/foreach} -->
 
-                        <li id="help_one" class="last-one"> {$article.title}</li></ul>
-                </div>
-                <!--这里是图片【？】后面的一个title    给相对应的属性去匹配   【帮助中心】-->
+                    </ul>
+                    </div>
+                    <!--这里是图片【？】后面的一个title    给相对应的属性去匹配   【帮助中心】-->
                 <div class="help-title" id="topNavigate">{$article.title}</div>
                 <!--这里显示的文章列表内容  -->
                 <div class="detail help-list" id="articlelist">

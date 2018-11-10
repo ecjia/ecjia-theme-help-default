@@ -32,6 +32,6 @@
 </div>
 <div class="banner help-banner">
     <div class="help-banner-wp">
-        <a href="https://www.dscmall.cn/" style="background:url({$theme_url}images/ad1.jpg) center center no-repeat; width:100%; height:200px;" target="_blank"></a>
+        <a href="" style="background:url({$theme_url}images/ad1.jpg) center center no-repeat;" target="_blank"></a>
     </div>
 </div>
