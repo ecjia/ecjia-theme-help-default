@@ -1,12 +1,12 @@
 <div class="tools">
     <div class="wrap">
-        <div class="bl-name" title="百联集团旗下全渠道电商平台"><div class="txt">百联集团旗下全渠道电商平台</div><b></b></div>
+        <div class="bl-name" title="{$shop_name}"><div class="txt">Hi，欢迎来到{$shop_name}</div><b></b></div>
         <div class="tools-right">
             <ul>
                 <li id="user_not_login" class="box">
                     <div>
-                        <a href="javascript:void(0);" class="login-button"><i></i><span>请登录</span></a>
-                        <a id="headerReg" href="javascript:void(0);" class="registered">注册</a>
+                        <a href="{$site_main}" class="login-button"><i></i><span>请登录</span></a>
+                        <a id="headerReg" href="{$site_login}" class="registered">注册</a>
                     </div>
                 </li>
             </ul>
@@ -17,7 +17,7 @@
     <div class="wrap ">
         <div class="info-header">
             <div class="info-logo">
-                <a href="http://www.bl.com"> <img src="{$shop_logo}" style="max-height: 60px;    max-width: 159px;" alt="百联帮助中心"></a>
+                <a href="http://www.bl.com"> <img src="{$shop_logo}" style="max-height: 60px;    max-width: 159px;" alt="{$shop_name}"></a>
             </div>
             <!--【帮助中心】、【新闻公告】、【关于我们】  -->
             <div class="info-menu">
@@ -28,5 +28,10 @@
                 </ul>
             </div>
         </div>
+    </div>
+</div>
+<div class="banner help-banner">
+    <div class="help-banner-wp">
+        <a href="https://www.dscmall.cn/" style="background:url({$theme_url}images/ad1.jpg) center center no-repeat; width:100%; height:200px;" target="_blank"></a>
     </div>
 </div>

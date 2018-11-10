@@ -56,6 +56,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
  */
 function smarty_insert_page_header($params, Smarty_Internal_Template $template) {
     $shop_logo = ecjia::config('shop_logo');
+    $shop_name = ecjia::config('shop_name');
     $theme_url = RC_Theme::get_template_directory_uri() . '/';
 
     $disk = RC_Filesystem::disk();
@@ -64,11 +65,14 @@ function smarty_insert_page_header($params, Smarty_Internal_Template $template) 
     } else {
     	$shop_logo = $theme_url . "images/shop_logo.png";
     }
-    ecjia_front::$controller->assign('shop_logo', $shop_logo);
-    ecjia_front::$controller->assign('search_keywords', ecjia::config('search_keywords'));
 
-    $cat_list = RC_DB::table('category')->where('is_show', 1)->where('parent_id', 0)->orderBy('sort_order', 'asc')->orderBy('cat_id', 'desc')->limit(6)->get();
-    ecjia_front::$controller->assign('cat_list', $cat_list);
+    $site_main = str_replace('sites/help', 'sites/member', RC_Uri::home_url());
+    $site_login = str_replace('sites/help', 'sites/member', RC_Uri::url('user/privilege/register'));
+
+    ecjia_front::$controller->assign('shop_name',   $shop_name);
+    ecjia_front::$controller->assign('shop_logo',   $shop_logo);
+    ecjia_front::$controller->assign('site_main',   $site_main);
+    ecjia_front::$controller->assign('site_login',  $site_login);
 
     $val = ecjia_front::$controller->fetch('library/page_header.lbi');
 
