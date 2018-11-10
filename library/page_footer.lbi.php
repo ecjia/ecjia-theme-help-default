@@ -26,7 +26,7 @@
     <div class="bottom-nav">
         <div>
             <!-- {foreach $shop_info as $info} -->
-            <a target="_blank" href='{url path="article/help/init"}&aid={$info.article_id}'>{$info.title}</a>
+            <a target="_blank" href='{url path="article/about/init"}&aid={$info.article_id}'>{$info.title}</a>
             <span>|</span>
             <!-- {/foreach} -->
         </div>

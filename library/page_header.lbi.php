@@ -19,12 +19,15 @@
             <div class="info-logo">
                 <a href="http://www.bl.com"> <img src="{$shop_logo}" style="max-height: 60px;    max-width: 159px;" alt="{$shop_name}"></a>
             </div>
-            <!--【帮助中心】、【新闻公告】、【关于我们】  -->
             <div class="info-menu">
                 <ul>
-                    <li class="help-center current" onclick="helpCenter()"><span>帮助中心</span></li>
-                    <li class="new-ad" onclick="showNewArticle()" ;=""><span>新闻公告</span></li>
-                    <li class="about-our" onclick="aboutOur()"><span>关于我们</span></li>
+                    <li class="help-center {if empty($smarty.get.c) || $smarty.get.c eq 'help'} current {/if}">
+                        <a  href='{url path="article/help/init"}'><span>帮助中心</span> </a>
+                    </li>
+                    <li class="new-ad"><span>商城公告</span></li>
+                    <li class="about-our {if $smarty.get.c eq 'about'} current {/if}">
+                        <a href='{url path="article/about/init"}'> <span>关于我们</span></a>
+                    </li>
                 </ul>
             </div>
         </div>

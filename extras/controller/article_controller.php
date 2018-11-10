@@ -57,7 +57,7 @@ class article_controller
 
         $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
 
-        if (!ecjia_front::$controller->is_cached('article.dwt', $cache_id)) {
+        if (!ecjia_front::$controller->is_cached('article_index.dwt', $cache_id)) {
             $shop_help = ecjia_api_manager::make()->api(ecjia_api_const::SHOP_HELP)->run();
             if (!is_ecjia_error($shop_help)) {
                 ecjia_front::$controller->assign('shop_help', $shop_help);
@@ -75,7 +75,7 @@ class article_controller
             ecjia_front::$controller->assign_title('帮助中心');
         }
 //        _dump($shop_info,1);
-        ecjia_front::$controller->display('article.dwt');
+        ecjia_front::$controller->display('article_index.dwt');
     }
 
     public static function about()
@@ -84,7 +84,7 @@ class article_controller
 
         $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
 
-        if (!ecjia_front::$controller->is_cached('article.dwt', $cache_id)) {
+        if (!ecjia_front::$controller->is_cached('article_about.dwt', $cache_id)) {
             $shop_info = ecjia_api_manager::make()->api(ecjia_api_const::SHOP_INFO)->run();
             if (!is_ecjia_error($shop_info)) {
                 ecjia_front::$controller->assign('shop_info', $shop_info);
@@ -98,11 +98,11 @@ class article_controller
 
             ecjia_front::$controller->assign('aid',     $article_id);
             ecjia_front::$controller->assign('article', $shop_info_detail);
-
+//dd($shop_info);
             ecjia_front::$controller->assign_title('帮助中心');
         }
 
-        ecjia_front::$controller->display('article.dwt');
+        ecjia_front::$controller->display('article_about.dwt');
     }
 
 }
