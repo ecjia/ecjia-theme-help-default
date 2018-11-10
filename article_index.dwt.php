@@ -10,7 +10,7 @@
     <!-- TemplateEndEditable -->
     <!-- TemplateBeginEditable name="head" -->
     <!-- TemplateEndEditable -->
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/tools1200.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
@@ -40,20 +40,6 @@
                     <!-- {/foreach} -->
                 </ul>
                 <!-- {/foreach} -->
-<!--                <input id="help_onekey" type="hidden" value="售后服务">-->
-<!---->
-<!--                <p class="menu_head">售后服务</p>-->
-<!--                <ul style="display: none" class="menu_body">-->
-<!---->
-<!--                    <li><a attr_id="290" style="cursor: pointer;" class="" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=290&amp;&amp;categoryType=help">退换货政策</a>-->
-<!--                    </li>-->
-<!--                    <li><a attr_id="291" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=291&amp;&amp;categoryType=help">退换货流程</a>-->
-<!--                    </li>-->
-<!--                    <li><a attr_id="292" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=292&amp;&amp;categoryType=help">退款说明</a>-->
-<!--                    </li>-->
-<!--                    <li><a attr_id="347" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=347&amp;&amp;categoryType=help">品牌售后服务电话</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
 
             </div>
             <!--右边部分XXX>XXX>XXX>XXX>XXX 【帮助中心】 右边-->
@@ -89,91 +75,6 @@
 
             </div>
 
-        </div>
-
-
-
-        <!--这里是【新闻公告】板块  -->
-        <div class="info-block new clearfix" style="display: none;" id="xinwen">
-            <!-- <div class="help-right new-block-listArticle"> -->
-            <div class="help-right new-block-list" id="newNavigate">
-
-                <div>
-                    <ul class="crumb clearfix">
-                        <li><a href="#">新闻公告</a> <i>&gt;</i></li>
-                        <li id="help_one" class="last-one">
-                            热点新闻
-                        </li>
-                        <!-- <li><a href="#" onclick="showNewArticle()";>热点新闻</a> <i>&gt; </i></li> -->
-                    </ul>
-                </div>
-                <div class="help-title new-title">热点新闻</div>
-                <div class="detail help-list new-list" id="newArt">
-                    <ul>
-
-
-                    </ul>
-                </div>
-
-                <div class="detail help-list" id="newtext"></div>
-
-            </div>
-        </div>
-
-
-
-
-
-        <!--这里是【关于我们】模块  -->
-        <div class="info-block our clearfix" style="display: none;" id="women">
-            <div id="aboutour" class="help-left">
-                <input id="about_onekey" type="hidden" value="关于我们">
-
-                <p class="menu_head current-header">关于我们</p>
-                <ul style="display: block" class="menu_body">
-                    <li><a attr_id="296" class="current" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=296&amp;&amp;categoryType=about">关于我们</a>
-
-                    </li>
-                    <li><a attr_id="297" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=297&amp;&amp;categoryType=about">联系我们</a></li>
-                    <li><a attr_id="298" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=298&amp;&amp;categoryType=about">加盟合作</a></li>
-                    <li><a attr_id="299" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=299&amp;&amp;categoryType=about">诚征英才</a></li>
-                    <li><a attr_id="300" style="cursor: pointer;" href="http://help.bl.com/toHelpCenter/queryCategoryId.html?categoryId=300&amp;&amp;categoryType=about">友情链接</a></li>
-                </ul>
-            </div>
-
-
-
-
-            <div class="help-right">
-                <!--右边部分XXX>XXX>XXX>XXX>XXX 【关于我们】 右边-->
-                <div class="navigateHelp">
-                    <ul class="crumb clearfix">
-                        <li><a href="">关于我们</a> <i>&gt;</i></li>
-                        <li id="about_one" class="last-one">
-                            <i>&gt;</i>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <!--【！】后面的title  -->
-                <div class="help-title our-title" id="ouerNavigat"></div>
-
-                <!--【关于我们】的文章列表  -->
-                <div class="detail help-list" id="ourArticle">
-
-                    <ul>
-
-                    </ul>
-
-                </div>
-
-
-                <input type="hidden" class="categoryId" value="[270, 271, 272, 269, 327, 307]">
-                <div class="detail help-list" id="aboutourArticle">
-                </div>
-
-            </div>
         </div>
     </div>
 </div>

@@ -74,7 +74,7 @@ class article_controller
 
             ecjia_front::$controller->assign_title('帮助中心');
         }
-//        _dump($shop_info,1);
+
         ecjia_front::$controller->display('article_index.dwt');
     }
 
@@ -98,8 +98,8 @@ class article_controller
 
             ecjia_front::$controller->assign('aid',     $article_id);
             ecjia_front::$controller->assign('article', $shop_info_detail);
-//dd($shop_info);
-            ecjia_front::$controller->assign_title('帮助中心');
+
+            ecjia_front::$controller->assign_title('关于我们');
         }
 
         ecjia_front::$controller->display('article_about.dwt');
