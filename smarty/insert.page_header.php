@@ -66,8 +66,8 @@ function smarty_insert_page_header($params, Smarty_Internal_Template $template) 
     	$shop_logo = $theme_url . "images/shop_logo.png";
     }
 
-    $site_main = str_replace('sites/help', 'sites/member', RC_Uri::home_url());
-    $site_login = str_replace('sites/help', 'sites/member', RC_Uri::url('user/privilege/register'));
+    $site_main = str_replace('/sites/help', '', ecjia_member_uri::login_url());
+    $site_login = str_replace('/sites/help', '', ecjia_member_uri::register_url());
 
     ecjia_front::$controller->assign('shop_name',   $shop_name);
     ecjia_front::$controller->assign('shop_logo',   $shop_logo);
