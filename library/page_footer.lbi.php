@@ -27,7 +27,7 @@
         <div>
             <!-- {foreach $shop_info as $key => $info} -->
             <a target="_blank" href='{url path="article/about/init"}&aid={$info.article_id}'>{$info.title}</a>
-            {if end($shop_info) eq $info}
+            {if end($shop_info) neq $info}
             <span>|</span>
             {/if}
             <!-- {/foreach} -->

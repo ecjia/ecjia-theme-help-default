@@ -55,7 +55,7 @@
             <!--右边部分XXX>XXX>XXX>XXX>XXX 【帮助中心】 右边-->
             <div id="rightContent" class="help-right">
                 <div>
-                    <ul class="crumb clearfix" style="padding-bottom: 10px;border-bottom: 1px solid #dee2e6!important;">
+                    <ul class="crumb clearfix">
                         <li><a href="#">帮助中心</a> <i>&gt;</i></li>
 
                         <!-- {foreach $article_list as $article_list_cat} -->
