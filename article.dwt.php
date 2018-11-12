@@ -39,8 +39,8 @@
                     <p class="menu_head current-header">关于我们</p>
                     {/if}
                 {else}
-                    <input id="help_onekey" type="hidden" value="{$shop_help_cat.name}">
-                    <p class="menu_head current-header">关于我们</p>
+                    <input id="help_onekey" type="hidden" value="{$article_list_cat.name}">
+                    <p class="menu_head current-header">{$article_list_cat.name}</p>
                 {/if}
                 <ul style="" class="menu_body">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
