@@ -5,8 +5,8 @@
             <ul>
                 <li id="user_not_login" class="box">
                     <div>
-                        <a href="{$site_main}" class="login-button"><i></i><span>请登录</span></a>
-                        <a id="headerReg" href="{$site_login}" class="registered">注册</a>
+                        <a href="{$site_main}" target="_blank" class="login-button"><i></i><span>请登录</span></a>
+                        <a id="headerReg" target="_blank" href="{$site_login}" class="registered">注册</a>
                     </div>
                 </li>
             </ul>
