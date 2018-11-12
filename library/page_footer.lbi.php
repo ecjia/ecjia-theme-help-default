@@ -8,7 +8,7 @@
                 {if $key lt 5}
                 <div class="helpnav-list">
                     <div class="helpnav-title">
-                        <i class="footic1"></i>
+                        <i></i>
                         {$help.name}
                     </div>
                     <ul>
@@ -27,10 +27,12 @@
         <div>
             <!-- {foreach $shop_info as $info} -->
             <a target="_blank" href='{url path="article/about/init"}&aid={$info.article_id}'>{$info.title}</a>
+            {if end($shop_info) neq $info}
             <span>|</span>
+            {/if}
             <!-- {/foreach} -->
         </div>
-        <div class="copyright">{if ecjia::config('company_name')}{ecjia::config('company_name')}版权所有{/if} <span>|</span>  客服电话：{ecjia::config('service_phone')}  <span>|</span> {if ecjia::config('icp_number')}{ecjia::config('icp_number')}{/if}</div>
+        <div class="copyright">{if ecjia::config('company_name')}{ecjia::config('company_name')}版权所有{/if} <span>|</span>  客服电话：{ecjia::config('service_phone')}  <span>|</span> {if ecjia::config('icp_number')}<a style="color: #999;" href="http://www.miibeian.gov.cn" target="_blank">{ecjia::config('icp_number')}</a>{/if}</div>
         <div class="police">
         </div>
     </div>

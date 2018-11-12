@@ -24,7 +24,9 @@
                     <li class="help-center {if empty($smarty.get.c) || $smarty.get.c eq 'help'} current {/if}">
                         <a  href='{url path="article/help/init"}'><span>帮助中心</span> </a>
                     </li>
-                    <li class="new-ad"><span>商城公告</span></li>
+                    <li class="new-ad {if $smarty.get.c eq 'news'} current {/if}">
+                        <a href='{url path="article/shop_notice/init"}'><span>商城公告</span></a>
+                    </li>
                     <li class="about-our {if $smarty.get.c eq 'about'} current {/if}">
                         <a href='{url path="article/about/init"}'> <span>关于我们</span></a>
                     </li>
