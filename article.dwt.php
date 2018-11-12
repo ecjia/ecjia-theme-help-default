@@ -28,14 +28,24 @@
 
             <!--对于【帮助中心】左边目录部分     左边目录有两级  tree  【帮助中心】左边-->
             <div id="leftMenu" class="help-left">
-                <!-- {foreach $shop_help as $shop_help_cat} -->
-                <input id="help_onekey" type="hidden" value="{$shop_help_cat.name}">
-
-                <p class="menu_head current-header">{$shop_help_cat.name}</p>
+                <!-- {foreach $article_list as $article_list_cat} -->
+                {if empty($article_list_cat.name)}
+                    {if  $smarty.get.article_type eq 'shop_notice'}
+                    <input id="help_onekey" type="hidden" value="新闻公告">
+                    <p class="menu_head current-header">商城公告</p>
+                    {/if}
+                    {if  $smarty.get.article_type eq 'shop_info'}
+                    <input id="help_onekey" type="hidden" value="关于我们">
+                    <p class="menu_head current-header">关于我们</p>
+                    {/if}
+                {else}
+                    <input id="help_onekey" type="hidden" value="{$shop_help_cat.name}">
+                    <p class="menu_head current-header">关于我们</p>
+                {/if}
                 <ul style="" class="menu_body">
-                    <!-- {foreach $shop_help_cat.article as $key => $shop_help_child_cat} -->
+                    <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li>
-                        <a href='{url path="article/help/init"}&aid={$shop_help_child_cat.id}' style='cursor: pointer;' {if $shop_help_child_cat.id eq $aid} class='current' {/if}>{$shop_help_child_cat.title}</a>
+                        <a href='{url path="article/index/init"}&article_type={$article_type}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
                     </li>
                     <!-- {/foreach} -->
                 </ul>
@@ -48,18 +58,20 @@
                     <ul class="crumb clearfix">
                         <li><a href="#">帮助中心</a> <i>&gt;</i></li>
 
-                    <!-- {foreach $shop_help as $shop_help_cat} -->
-                        <!-- {foreach $shop_help_cat.article as  $shop_help_child_cat} -->
-                        {if $shop_help_child_cat.id eq $aid}
-                        <li id="help_one" class="last-one">{$shop_help_cat.name}<i>&gt;</i></li>
-                        <li id="help_one" class="last-one">{$shop_help_child_cat.title}</li>
+                        <!-- {foreach $article_list as $article_list_cat} -->
+                        <!-- {foreach $article_list_cat.article as  $article_list_child_cat} -->
+                        {if $article_list_child_cat.id eq $aid}
+                        {if not empty($article_list_cat.name) }
+                        <li id="help_one" class="last-one">{$article_list_cat.name}<i>&gt;</i></li>
+                        {/if}
+                        <li id="help_one" class="last-one">{$article_list_child_cat.title}</li>
                         {/if}
                         <!-- {/foreach} -->
-                    <!-- {/foreach} -->
+                        <!-- {/foreach} -->
 
                     </ul>
-                    </div>
-                    <!--这里是图片【？】后面的一个title    给相对应的属性去匹配   【帮助中心】-->
+                </div>
+                <!--这里是图片【？】后面的一个title    给相对应的属性去匹配   【帮助中心】-->
                 <div class="help-title" id="topNavigate">{$article.title}</div>
                 <!--这里显示的文章列表内容  -->
                 <div class="detail help-list" id="articlelist">

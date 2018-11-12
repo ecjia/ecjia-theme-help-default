@@ -50,8 +50,8 @@
 return [
 
     //文章
-    'article/help/init'                     => 'article_controller@init',   //帮助中心
-    'article/about/init'                    => 'article_controller@about',  //网店信息（关于我们）
+    'article/index/init'                     => 'article_controller@init',   //帮助中心
+//    'article/about/init'                    => 'article_controller@about',  //网店信息（关于我们）
 //    'article/notice/init'                   => 'article_controller@init',   //平台公告
 
 
