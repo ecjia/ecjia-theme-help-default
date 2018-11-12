@@ -72,8 +72,8 @@
                     </ul>
                 </div>
                 <!--这里是图片【？】后面的一个title    给相对应的属性去匹配   【帮助中心】-->
-                <div class="help-title" id="topNavigate" style="font-size: 24px;font-weight: 999;color: #333;background: unset;text-align: center">{$article.title}</div>
-                <div class="" id="topNavigate" style="margin-left: 20px;font-size: 14px;color: #a5a5a5;text-align: center">{RC_Time::local_date('Y-m-d H:i:s', $article.add_time)}</div>
+                <div class="help-title" id="topNavigate" style="margin-bottom: 10px;font-size: 24px;font-weight: 999;color: #333;background: unset;text-align: center">{$article.title}</div>
+                <div class="" id="topNavigate" style="margin-bottom: 15px;margin-left: 20px;font-size: 14px;color: #a5a5a5;text-align: center">{RC_Time::local_date('Y-m-d H:i:s', $article.add_time)}</div>
 
                 <!--这里显示的文章列表内容  -->
                 <div class="detail help-list" id="articlelist">
