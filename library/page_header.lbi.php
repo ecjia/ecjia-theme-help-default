@@ -37,6 +37,6 @@
 </div>
 <div class="banner help-banner">
     <div class="help-banner-wp">
-        <a href="" style="background:url({$theme_url}images/ad1.jpg) center center no-repeat;" target="_blank"></a>
+        <a role="button" style="background:url({$theme_url}images/banner.png) center center no-repeat;"></a>
     </div>
 </div>

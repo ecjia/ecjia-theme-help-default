@@ -1,6 +1,6 @@
 {nocache}
-<div id="footer" class="footer">
-    <div class="helpnav clearfix">
+<div id="footer" class="footer" style="background: #f5f5f5">
+    <div class="helpnav clearfix" style="background: #f5f5f5">
         <div class="wrap">
             <div class="footer-center">
                 {if $help_list}
@@ -23,11 +23,11 @@
             </div>
         </div>
     </div>
-    <div class="bottom-nav">
+    <div class="bottom-nav" style="background: #f5f5f5">
         <div>
-            <!-- {foreach $shop_info as $info} -->
+            <!-- {foreach $shop_info as $key => $info} -->
             <a target="_blank" href='{url path="article/about/init"}&aid={$info.article_id}'>{$info.title}</a>
-            {if end($shop_info) neq $info}
+            {if end($shop_info) eq $info}
             <span>|</span>
             {/if}
             <!-- {/foreach} -->

@@ -136,7 +136,9 @@
 }
 .help-left a
 {
-    color: #999;
+    /*color: #999;*/
+    color: #666;
+
 }
 .help-left .current
 {
@@ -155,6 +157,7 @@
 .help-left ul
 {
     padding-top: 10px;
+    padding-bottom: 10px;
 
     width: 150px;
 
