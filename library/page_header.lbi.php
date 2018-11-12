@@ -22,13 +22,13 @@
             <div class="info-menu">
                 <ul>
                     <li class="help-center {if empty($smarty.get.article_type) || $smarty.get.article_type eq 'shop_help'} current {/if}">
-                        <a  href='{url path="article/index/init"}&article_type=shop_help'><span>帮助中心</span> </a>
+                        <a  href='{url path="article/help/init"}&article_type=shop_help'><span>帮助中心</span> </a>
                     </li>
                     <li class="new-ad {if $smarty.get.article_type eq 'shop_notice'} current {/if}">
-                        <a href='{url path="article/index/init"}&article_type=shop_notice'><span>商城公告</span></a>
+                        <a href='{url path="article/help/init"}&article_type=shop_notice'><span>商城公告</span></a>
                     </li>
                     <li class="about-our {if $smarty.get.article_type eq 'shop_info'} current {/if}">
-                        <a href='{url path="article/index/init"}&article_type=shop_info'> <span>关于我们</span></a>
+                        <a href='{url path="article/help/init"}&article_type=shop_info'> <span>关于我们</span></a>
                     </li>
                 </ul>
             </div>

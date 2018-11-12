@@ -45,7 +45,7 @@
                 <ul style="" class="menu_body">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
-                        <a  href='{url path="article/index/init"}&article_type={$article_type}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
+                        <a  href='{url path="article/help/init"}&article_type={$article_type}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
                     </li>
                     <!-- {/foreach} -->
                 </ul>
