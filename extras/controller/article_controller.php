@@ -62,6 +62,7 @@ class article_controller
                 'article_type' => $article_type,
                 'sort_order' => 'ASC',
                 'article_id' => 'ASC',
+                'add_time' => 'ASC',
             );
             $data = RC_Api::api('article', 'article_list', $options);
 

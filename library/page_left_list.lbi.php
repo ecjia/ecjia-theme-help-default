@@ -39,7 +39,7 @@
                 <!-- <li><a href="#" onclick="showNewArticle()";>热点新闻</a> <i>&gt; </i></li> -->
             </ul>
         </div>
-        <div class="help-title new-title">热点公告</div>
+        <div class="help-title news-title">热点公告</div>
         <div class="detail help-list new-list" id="newArt">
             <ul>
                 <!-- {foreach $article_list as $article_list_cat} -->
@@ -48,7 +48,7 @@
                     <div class="new-list-detail" id="newsPart">
                         <a articleid="322" style="cursor: pointer;" class="current" target="_blank" href='{url path="article/help/init"}&article_type={$article_type}&aid={$article_list_child_cat.id}&show=detail'>{$article_list_child_cat.title}</a>
                     </div>
-                    <div class="new-list-time">{RC_Time::local_date('Y-m-d H:i:s', $article_list_child_cat.add_time)}</div>
+                    <div class="new-list-time" style="float: right">{RC_Time::local_date('Y-m-d H:i:s', $article_list_child_cat.add_time)}</div>
                 </li>
                 <!-- {/foreach} -->
                 <!-- {/foreach} -->
