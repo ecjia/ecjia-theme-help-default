@@ -61,8 +61,8 @@ function smarty_insert_page_footer($params, Smarty_Internal_Template $template) 
 
     ecjia_front::$controller->assign('help_list', $help_list); //底部帮助
 
-    $shop_info = RC_DB::table('article')->select('article_id', 'title')->where('cat_id', 0)->where('article_type', 'shop_info')->orderby('article_id', 'asc')->get();
-    ecjia_front::$controller->assign('shop_info', $shop_info);
+    $shop_info_html = (new Ecjia\App\Article\ShopInfoArticleList)->outputHtml();
+    ecjia_front::$controller->assign('shop_info_html', $shop_info_html);
 
 	//获取友情链接数据
     $friendlink = RC_Api::api('friendlink', 'friendlink_list', ['type' => 'logo']);
