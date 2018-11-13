@@ -28,17 +28,12 @@
 
             <div id="leftMenu" class="help-left">
                 <!-- {foreach $article_list as $article_list_cat} -->
-                {if  $smarty.get.article_type eq 'shop_info'}
-                <input id="help_onekey" type="hidden" value="关于我们">
-                <p class="menu_head current-header">关于我们</p>
-                {elseif $smarty.get.article_type eq 'shop_help'}
                 <input id="help_onekey" type="hidden" value="{$article_list_cat.name}">
                 <p class="menu_head current-header">{$article_list_cat.name}</p>
-                {/if}
                 <ul style="" class="menu_body">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
-                        <a  href='{url path="article/help/init"}&article_type={$article_type}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
+                        <a  href='{url path="article/help/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
                     </li>
                     <!-- {/foreach} -->
                 </ul>
@@ -64,7 +59,7 @@
                     </ul>
                 </div>
 
-                <div class="help-title" id="topNavigate" style="margin-bottom: 10px;font-size: 24px;font-weight: 999;color: #333;background: unset;text-align: center">{$article.title}</div>
+                <div class="help-title" id="topNavigate" >{$article.title}</div>
 
                 <div class="detail help-list" id="artricleText">
                     {rc_stripslashes($article.content)}

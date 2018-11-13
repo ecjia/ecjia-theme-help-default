@@ -13,7 +13,7 @@
                     </div>
                     <ul>
                         <!-- {foreach from=$help.article key=k item=h} -->
-                        <li><a href="{RC_Uri::url('article/help/init')}&article_type=shop_help&aid={$h.id}" title="{$h.title}" target="_blank">{$h.title}</a></li>
+                        <li><a href="{RC_Uri::url('article/help/init')}&aid={$h.id}" title="{$h.title}" target="_blank">{$h.title}</a></li>
                         <!-- {/foreach} -->
                     </ul>
                 </div>
@@ -26,7 +26,7 @@
     <div class="bottom-nav" style="background: #f5f5f5">
         <div>
             <!-- {foreach $shop_info as $key => $info} -->
-            <a target="_blank" href='{url path="article/help/init"}&article_type=shop_info&aid={$info.article_id}'>{$info.title}</a>
+            <a target="_blank" href='{url path="article/info/init"}&aid={$info.article_id}'>{$info.title}</a>
             {if end($shop_info) neq $info}
             <span>|</span>
             {/if}

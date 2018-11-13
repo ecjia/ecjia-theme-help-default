@@ -34,12 +34,10 @@
 {
     margin-left: 10px;
     padding: 23px 0;
-
     float: left;
-
     width: 148px;
-
     text-align: center;
+    padding-bottom: 22px;
 }
 .info-header li.help-center
 {
@@ -137,9 +135,12 @@
 }
 .help-left a
 {
-    /*color: #999;*/
     color: #666;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 .help-left .current
 {
@@ -193,7 +194,8 @@
 .help-right ul.crumb
 {
     margin-top: 25px;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
     padding-bottom: 25px;
     border-bottom: 1px solid #dee2e6!important;
 }
@@ -226,17 +228,15 @@
     margin-top: 33px;
     margin-left: 20px;
     padding-left: 46px;
-
     width: 884px;
     height: 34px;
-
-    background: #e8f5ff url('//img.iblimg.com/respc-1/resources/v3.0/css/i/help-center-1.png') no-repeat 0 0;
-
-    font-family: Microsoft Yahei;
-    font-size: 14px;
     line-height: 34px;
-
-    color: #08c;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 999;
+    color: #333;
+    background: unset;
+    text-align: center;
 }
 .help-right .detail
 {
@@ -264,7 +264,7 @@
 
     font-size: 14px;
 
-    color: #777;
+    color: #666;
 
     white-space: nowrap;
     text-overflow: ellipsis;

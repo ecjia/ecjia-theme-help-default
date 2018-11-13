@@ -21,14 +21,14 @@
             </div>
             <div class="info-menu">
                 <ul>
-                    <li onclick="javascript:document.getElementById('shop_help').click();" class="help-center {if $smarty.get.c neq 'notice' && empty($smarty.get.article_type) || $smarty.get.article_type eq 'shop_help'} current {/if}">
-                        <a id="shop_help" href='{url path="article/help/init"}&article_type=shop_help'><span>帮助中心</span> </a>
+                    <li onclick="javascript:document.getElementById('shop_help').click();" class="help-center {if $smarty.get.c eq 'help' || empty($smarty.get.c) } current {/if}">
+                        <a id="shop_help" href='{url path="article/help/init"}'><span>帮助中心</span> </a>
                     </li>
                     <li onclick="javascript:document.getElementById('shop_notice').click();" class="new-ad {if $smarty.get.c eq 'notice'} current {/if}">
                         <a id="shop_notice" href='{url path="article/notice/init"}'><span>商城公告</span></a>
                     </li>
-                    <li onclick="javascript:document.getElementById('shop_info').click();" class="about-our {if $smarty.get.article_type eq 'shop_info'} current {/if}">
-                        <a id="shop_info" href='{url path="article/help/init"}&article_type=shop_info'> <span>关于我们</span></a>
+                    <li onclick="javascript:document.getElementById('shop_info').click();" class="about-our {if $smarty.get.c eq 'info'} current {/if}">
+                        <a id="shop_info" href='{url path="article/info/init"}'> <span>关于我们</span></a>
                     </li>
                 </ul>
             </div>
