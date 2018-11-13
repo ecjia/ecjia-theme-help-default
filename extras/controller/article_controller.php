@@ -59,23 +59,24 @@ class article_controller
 
         if (!ecjia_front::$controller->is_cached('article.dwt', $cache_id)) {
             $options = array(
-                'article_type' => $article_type,
-                'sort_order' => 'ASC',
-                'article_id' => 'ASC',
-                'add_time' => 'ASC',
+                'page_size'     =>  1000,
+                'article_type'  => $article_type,
+                'sort_order'    => 'ASC',
+                'article_id'    => 'ASC',
+                'add_time'      => 'ASC',
             );
-            $data = RC_Api::api('article', 'article_list', $options);
 
+            $data = RC_Api::api('article', 'article_list', $options);
             $article_list = array();
             foreach($data['arr'] as $key => $row)
             {
-                $article_list[$row['cat_id']]['name']                     	 = $row['cat_name'];
-                $article_list[$row['cat_id']]['article'][$key]['id']  		 = $row['article_id'];
-                $article_list[$row['cat_id']]['article'][$key]['title']       = $row['title'];
-                $article_list[$row['cat_id']]['article'][$key]['add_time']       = $row['add_time'];
-                $article_list[$row['cat_id']]['article'][$key]['short_title'] = ecjia::config('article_title_length') > 0 ? RC_String::sub_str($row['title'], ecjia::config('article_title_length')) : $row['title'];
+                $article_list[$row['cat_id']]['name']                           = $row['cat_name'];
+                $article_list[$row['cat_id']]['article'][$key]['id']            = $row['article_id'];
+                $article_list[$row['cat_id']]['article'][$key]['title']         = $row['title'];
+                $article_list[$row['cat_id']]['article'][$key]['date']         = $row['date'];
+                $article_list[$row['cat_id']]['article'][$key]['month']         = RC_Time::local_date('Y-m', $row['add_time']);
+                $article_list[$row['cat_id']]['article'][$key]['short_title']   = ecjia::config('article_title_length') > 0 ? RC_String::sub_str($row['title'], ecjia::config('article_title_length')) : $row['title'];
             }
-//            dd($article_list);
             if (!is_ecjia_error($article_list)) {
                 ecjia_front::$controller->assign('article_list', $article_list);
             }
