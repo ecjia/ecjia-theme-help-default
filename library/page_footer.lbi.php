@@ -39,25 +39,18 @@
 </div>
 {/nocache}
 <script type="text/javascript">
-    $(function(){
-        $('.current').parent().parent('ul').show().siblings('ul').removeClass('current-header');
+    $(document).ready(function(){
+        $('.current').parent().parent('ul').show();
+        $('.current').parent().parent('ul').prev().addClass('current-header');
+    });
 
-        $('p.menu_head').click(function(){
-            if($(this).addClass('current-header').next('ul.menu_body').css('display')=='none'){
-                $(this).addClass('current-header').next('ul.menu_body').show();
-            }else{
-                $(this).addClass('current-header').next('ul.menu_body').hide(400);
-            }
+    $('p.menu_head').click(function(){
+        if($(this).addClass('current-header').next('ul.menu_body').css('display')=='none'){
+            $(this).addClass('current-header').next('ul.menu_body').show();
+        }else{
+            $(this).addClass('current-header').next('ul.menu_body').hide(400);
+        }
 
-            $(this).siblings().removeClass('current-header');
-        });
-
-        $('.menu_body>li').click(function(event) {
-            $(this).find('a').addClass('current').parents().siblings().find('a').removeClass('current');
-        });
-
-
-
-
+        $(this).siblings().removeClass('current-header');
     });
 </script>
