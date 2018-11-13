@@ -27,10 +27,10 @@
         <div style="" class="info-block help clearfix" id="helpaa">
 
             <div id="leftMenu" class="help-left">
-                <!-- {foreach $article_list as $article_list_cat} -->
+                <!-- {foreach $article_list as $key => $article_list_cat} -->
                 <input id="help_onekey" type="hidden" value="关于我们">
                 <p class="menu_head current-header">关于我们</p>
-                <ul style="" class="menu_body">
+                <ul  class="menu_body" {if $key neq 0} style="display: none"{/if}>
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
                         <a  href='{url path="article/info/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid && $smarty.get.show neq "friendlink"} class='current' {/if}>{$article_list_child_cat.title}</a>
@@ -88,11 +88,12 @@
                 <div class="detail help-list" id="artricleText">
                     <ul>
                         {foreach $friendlink_list as $link}
-                        <li class="clearfix">
-                            <div class="new-list-detail" id="newsPart">
-                                <a style="cursor: pointer;" href="{$link.link_url}" target="{$link_target}" class="current">{$link.link_name}</a>
+                        <li>
+                            <div class="friendlink-list">
+                                <a href="{$link.link_url}" target="{$link.link_target}"><img width="120"  src="{$link.link_logo}">
+                                <h4>{$link.link_name}</h4>
+                                </a>
                             </div>
-                            <div class="new-list-time" > <img src="{$link.link_logo}"></div>
                         </li>
                         {/foreach}
                     </ul>

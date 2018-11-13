@@ -30,8 +30,8 @@
             <div id="leftMenu" class="help-left">
                 <!-- {foreach $article_list as $article_list_cat} -->
                 <input id="help_onekey" type="hidden" value="新闻公告">
-                <p class="menu_head current-header" style="font-size: 16px">商城公告</p>
-                <ul style="" class="menu_body">
+                <p class="menu_head current-header">商城公告</p>
+                <ul  class="menu_body" {if $key neq 0} style="display: none"{/if}>
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
                         <a  href='{url path="article/notice/init"}&date={$key}' style='cursor: pointer;' {if $date eq $key} class='current' {/if}>{$key}</a>

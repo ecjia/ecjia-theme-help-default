@@ -29,8 +29,8 @@
             <div id="leftMenu" class="help-left">
                 <!-- {foreach $article_list as $article_list_cat} -->
                 <input id="help_onekey" type="hidden" value="{$article_list_cat.name}">
-                <p class="menu_head current-header">{$article_list_cat.name}</p>
-                <ul style="" class="menu_body">
+                <p class="menu_head {if $key eq 0}current-header{/if}">{$article_list_cat.name}</p>
+                <ul  class="menu_body" {if $key neq 0} style="display: none"{/if}>
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
                         <a  href='{url path="article/help/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
