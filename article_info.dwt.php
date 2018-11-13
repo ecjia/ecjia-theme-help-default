@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/footer1200.css" />
+    <script type="text/jscript" src="{$theme_url}js/jquery-1.8.2.min.js"></script>
 </head>
 
 <body class="w1200">
@@ -32,13 +33,17 @@
                 <ul style="" class="menu_body">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
-                        <a  href='{url path="article/info/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
+                        <a  href='{url path="article/info/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid && $smarty.get.show neq "friendlink"} class='current' {/if}>{$article_list_child_cat.title}</a>
                     </li>
                     <!-- {/foreach} -->
+                    <li style="font-size: 14px;">
+                        <a  href='{url path="article/info/init"}&show=friendlink' style='cursor: pointer;' {if $smarty.get.show eq "friendlink"} class='current' {/if}>友情链接</a>
+                    </li>
                 </ul>
                 <!-- {/foreach} -->
             </div>
 
+            {if $smarty.get.show neq 'friendlink'}
             <div id="rightContent" class="help-right">
                 <div>
                     <ul class="crumb clearfix">
@@ -65,6 +70,36 @@
                 </div>
 
             </div>
+            {/if}
+
+            {if $smarty.get.show eq 'friendlink'}
+            <div id="rightContent" class="help-right">
+                <div>
+                    <ul class="crumb clearfix">
+                        <li><a href='{url path="article/info/init"}'>关于我们</a> <i>&gt;</i></li>
+
+                        <li id="help_one" class="last-one">友情链接</li>
+
+                    </ul>
+                </div>
+
+                <div class="help-title" id="topNavigate" >友情链接</div>
+
+                <div class="detail help-list" id="artricleText">
+                    <ul>
+                        {foreach $friendlink_list as $link}
+                        <li class="clearfix">
+                            <div class="new-list-detail" id="newsPart">
+                                <a style="cursor: pointer;" href="{$link.link_url}" target="{$link_target}" class="current">{$link.link_name}</a>
+                            </div>
+                            <div class="new-list-time" > <img src="{$link.link_logo}"></div>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </div>
+
+            </div>
+            {/if}
 
         </div>
     </div>

@@ -38,3 +38,22 @@
     </div>
 </div>
 {/nocache}
+<script type="text/javascript">
+    $(function(){
+        $('p.menu_head').click(function(){
+            if($(this).addClass('current-header').next('ul.menu_body').css('display')=='none'){
+                $(this).addClass('current-header').next('ul.menu_body').show();
+            }else{
+                $(this).addClass('current-header').next('ul.menu_body').hide(400);
+            }
+
+        });
+
+        $('.menu_body>li').click(function(event) {
+            $(this).find('a').addClass('current').parents().siblings().find('a').removeClass('current');
+        });
+
+
+
+    });
+</script>

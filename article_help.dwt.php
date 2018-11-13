@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/footer1200.css" />
+    <script type="text/jscript" src="{$theme_url}js/jquery-1.8.2.min.js"></script>
 </head>
 
 <body class="w1200">
