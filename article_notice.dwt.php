@@ -46,7 +46,7 @@
 
                 <div>
                     <ul class="crumb clearfix">
-                        <li><a href="#">商城公告</a> <i>&gt;</i></li>
+                        <li><a href='{url path="article/notice/init"}'>商城公告</a> <i>&gt;</i></li>
                         <li id="help_one" class="last-one">
                             热点公告
                         </li>
@@ -80,7 +80,7 @@
             <div id="rightContent" class="help-right">
                 <div>
                     <ul class="crumb clearfix">
-                        <li><a href="#">帮助中心</a> <i>&gt;</i></li>
+                        <li><a href='{url path="article/notice/init"}'>商城公告</a> <i>&gt;</i></li>
 
                         <!-- {foreach $article_list as $article_list_cat} -->
                         <!-- {foreach $article_list_cat.article as  $article_list_child_cat} -->
@@ -95,8 +95,8 @@
                     </ul>
                 </div>
 
-                <div class="help-title" id="topNavigate" >{$article.title}</div>
-                <div class="" id="topNavigate" style="margin-bottom: 15px;margin-left: 20px;font-size: 14px;color: #a5a5a5;text-align: center">{RC_Time::local_date('Y-m-d H:i:s', $article.add_time)}</div>
+                <div class="help-title" id="topNavigate" ><h1>{$article.title}</h1></div>
+                <div id="topNavigate" style="margin-bottom: 15px;margin-left: 20px;font-size: 14px;color: #a5a5a5;text-align: center">{RC_Time::local_date('Y-m-d H:i:s', $article.add_time)}</div>
 
                 <div class="detail help-list" id="artricleText">
                     {rc_stripslashes($article.content)}

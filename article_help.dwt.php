@@ -43,7 +43,7 @@
             <div id="rightContent" class="help-right">
                 <div>
                     <ul class="crumb clearfix">
-                        <li><a href="#">帮助中心</a> <i>&gt;</i></li>
+                        <li><a href='{url path="article/help/init"}'>帮助中心</a> <i>&gt;</i></li>
 
                         <!-- {foreach $article_list as $article_list_cat} -->
                         <!-- {foreach $article_list_cat.article as  $article_list_child_cat} -->
@@ -59,7 +59,7 @@
                     </ul>
                 </div>
 
-                <div class="help-title" id="topNavigate" >{$article.title}</div>
+                <div class="help-title" id="topNavigate" ><h1>{$article.title}</h1></div>
 
                 <div class="detail help-list" id="artricleText">
                     {rc_stripslashes($article.content)}
