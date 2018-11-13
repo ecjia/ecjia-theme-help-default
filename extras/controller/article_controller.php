@@ -66,7 +66,7 @@ class article_controller
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
-//            dd($data);
+
             $article_list = array();
             foreach($data['arr'] as $key => $row)
             {
@@ -112,7 +112,7 @@ class article_controller
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
-//            dd($data);
+
             $article_list = array();
             foreach($data['arr'] as $key => $row)
             {
@@ -137,7 +137,7 @@ class article_controller
             ecjia_front::$controller->assign('article_type',     $article_type);
             ecjia_front::$controller->assign('article', $shop_help_detail);
 
-            ecjia_front::$controller->assign_title('帮助中心');
+            ecjia_front::$controller->assign_title('关于我们');
         }
 
         ecjia_front::$controller->display('article_info.dwt');
