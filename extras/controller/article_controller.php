@@ -148,7 +148,7 @@ class article_controller
     {
         $article_id     = trim($_GET['aid']);
         $article_type   =   'shop_notice';
-        $page_size      =   !empty($_GET['page_size']) ? trim($_GET['page_size']) : 15;
+        $page_size      =   !empty($_GET['page_size']) ? trim($_GET['page_size']) : 99999999;
 
         $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
 
