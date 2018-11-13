@@ -61,7 +61,14 @@ function smarty_insert_page_footer($params, Smarty_Internal_Template $template) 
 
     ecjia_front::$controller->assign('help_list', $help_list); //底部帮助
 
-    $shop_info_html = (new Ecjia\App\Article\ShopInfoArticleList)->outputHtml();
+    $shop_info_html = (new Ecjia\App\Article\ShopInfoArticleList)->outputHtml(function($item, $key, $count) {
+        $html = '<a target="_blank" href="' .$item['link']. '">' .$item['title']. '</a>' . PHP_EOL;
+        if ($count-1 != $key) {
+            $html .= '<span>|</span>' . PHP_EOL;
+        }
+
+        return $html;
+    });
     ecjia_front::$controller->assign('shop_info_html', $shop_info_html);
 
 	//获取友情链接数据
