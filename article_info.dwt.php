@@ -30,7 +30,7 @@
                 <!-- {foreach $article_list as $key => $article_list_cat} -->
                 <input id="help_onekey" type="hidden" value="关于我们">
                 <p class="menu_head current-header">关于我们</p>
-                <ul  class="menu_body" {if $key neq 0} style="display: none"{/if}>
+                <ul  class="menu_body"  style="display: none">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
                     <li style="font-size: 14px;">
                         <a  href='{url path="article/info/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid && $smarty.get.show neq "friendlink"} class='current' {/if}>{$article_list_child_cat.title}</a>
@@ -90,7 +90,7 @@
                         {foreach $friendlink_list as $link}
                         <li>
                             <div class="friendlink-list">
-                                <a href="{$link.link_url}" target="{$link.link_target}"><img width="120"  src="{$link.link_logo}">
+                                <a href="{$link.link_url}" target="{$link.link_target}"><img src="{$link.link_logo}">
                                 <p>{$link.link_name}</p>
                                 </a>
                             </div>
