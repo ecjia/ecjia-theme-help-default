@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/footer1200.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/notosanssc.css" />
 </head>
 
 <body class="w1200">
@@ -59,7 +58,7 @@
                     </ul>
                 </div>
 
-                <div class="help-title" id="topNavigate" ><h1>{$article.title}</h1></div>
+                <div class="help-title" id="topNavigate" >{$article.title}</div>
 
                 <div class="detail help-list" id="artricleText">
                     {rc_stripslashes($article.content)}

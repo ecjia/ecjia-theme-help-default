@@ -56,7 +56,6 @@ a, area {
 
 body, button, input, label, select, textarea {
     font: 12px/150% arial, "Hiragino Sans GB", SimSun, tahoma, sans-serif;
-    *font-family: SimSun;
     outline: 0
 }
 

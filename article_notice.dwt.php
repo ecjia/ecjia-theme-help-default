@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
     <link rel="stylesheet" type="text/css" href="{$theme_url}css/footer1200.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/notosanssc.css" />
 </head>
 
 <body class="w1200">
@@ -95,7 +94,7 @@
                     </ul>
                 </div>
 
-                <div class="help-title" id="topNavigate" ><h1>{$article.title}</h1></div>
+                <div class="help-title" id="topNavigate" >{$article.title}</div>
                 <div id="topNavigate" style="margin-bottom: 15px;margin-left: 20px;font-size: 14px;color: #a5a5a5;text-align: center">{RC_Time::local_date('Y-m-d H:i:s', $article.add_time)}</div>
 
                 <div class="detail help-list" id="artricleText">
