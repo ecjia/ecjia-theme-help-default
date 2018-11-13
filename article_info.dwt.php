@@ -83,7 +83,7 @@
                     </ul>
                 </div>
 
-                <div class="help-title" id="topNavigate" >友情链接</div>
+                <div class="help-title" id="topNavigate" style="margin-bottom: 20px" >友情链接</div>
 
                 <div class="detail help-list" id="artricleText">
                     <ul>
@@ -91,7 +91,7 @@
                         <li>
                             <div class="friendlink-list">
                                 <a href="{$link.link_url}" target="{$link.link_target}"><img width="120"  src="{$link.link_logo}">
-                                <h4>{$link.link_name}</h4>
+                                <p>{$link.link_name}</p>
                                 </a>
                             </div>
                         </li>

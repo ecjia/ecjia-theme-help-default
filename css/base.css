@@ -1,4 +1,4 @@
-body {font: 12px/1.5 "Microsoft Yahei", 微软雅黑, Verdana, SimHei, "Microsoft JhengHei", Tahoma;}
+body {font-family: "PingFang SC","Microsoft YaHei",Lato,sans-serif;}
 
 body, dd, dl, form, h1, h2, h3, h4, h5, h6, p {
     margin: 0
@@ -138,7 +138,7 @@ body {
     border-radius: 4px;
 }
 
-.friendlink-list h4{
+.friendlink-list p{
     margin-top: 10px;
     font-size: 14px
 }

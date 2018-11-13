@@ -40,6 +40,8 @@
 {/nocache}
 <script type="text/javascript">
     $(function(){
+        $('.current').parent().parent('ul').show().siblings('ul').removeClass('current-header');
+
         $('p.menu_head').click(function(){
             if($(this).addClass('current-header').next('ul.menu_body').css('display')=='none'){
                 $(this).addClass('current-header').next('ul.menu_body').show();
@@ -50,10 +52,10 @@
             $(this).siblings().removeClass('current-header');
         });
 
-
         $('.menu_body>li').click(function(event) {
             $(this).find('a').addClass('current').parents().siblings().find('a').removeClass('current');
         });
+
 
 
 
