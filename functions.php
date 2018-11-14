@@ -85,6 +85,12 @@ RC_Hook::add_action('ecjia_front_finish_launching', function () {
     ecjia_front::$controller->assign('common_url', $common_url);
 
     ecjia_front::$controller->assign('theme_url', RC_Theme::get_template_directory_uri() . '/');
+
+    $general_info = array(
+        'powered' => 'Powered&nbsp;by&nbsp;<a href="https:\/\/ecjia.com" target="_blank">ECJia</a>',
+    );
+    $general_info = RC_Hook::apply_filters('ecjia_general_info_filter', $general_info);
+    ecjia_front::$controller->assign('commoninfo', $general_info);
 });
 
 //end
