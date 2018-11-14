@@ -1,4 +1,3 @@
-{nocache}
 <div id="footer" class="footer" style="background: #f5f5f5">
     <div class="helpnav clearfix" style="background: #f5f5f5">
         <div class="wrap">
@@ -32,7 +31,6 @@
         </div>
     </div>
 </div>
-{/nocache}
 <script type="text/javascript">
     $(document).ready(function(){
         $('.current').parent().parent('ul').show();

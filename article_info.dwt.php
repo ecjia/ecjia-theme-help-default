@@ -1,21 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="Keywords" content="{$keywords}" />
-    <meta name="Description" content="{$description}" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <!-- TemplateBeginEditable name="doctitle" -->
-    <title>{$page_title}</title>
-    <!-- TemplateEndEditable -->
-    <!-- TemplateBeginEditable name="head" -->
-    <!-- TemplateEndEditable -->
-    <link rel="shortcut icon" href="" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/tools1200.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/footer1200.css" />
-    <script type="text/jscript" src="{$theme_url}js/jquery-1.8.2.min.js"></script>
+    <!-- #BeginLibraryItem "/library/tag_head.lbi" --><!-- #EndLibraryItem -->
 </head>
 
 <body class="w1200">
@@ -24,8 +10,7 @@
 
 <div class="wrap-bg">
     <div class="wrap">
-        <div style="" class="info-block help clearfix" id="helpaa">
-
+        <div  class="info-block help clearfix" id="helpaa">
             <div id="leftMenu" class="help-left">
                 <!-- {foreach $article_list as $key => $article_list_cat} -->
                 <input id="help_onekey" type="hidden" value="关于我们">
@@ -43,12 +28,12 @@
                 <!-- {/foreach} -->
             </div>
 
+
             {if $smarty.get.show neq 'friendlink'}
             <div id="rightContent" class="help-right">
                 <div>
                     <ul class="crumb clearfix">
                         <li><a href='{url path="article/info/init"}'>关于我们</a> <i>&gt;</i></li>
-
                         <!-- {foreach $article_list as $article_list_cat} -->
                         <!-- {foreach $article_list_cat.article as  $article_list_child_cat} -->
                         {if $article_list_child_cat.id eq $aid}
@@ -59,32 +44,25 @@
                         {/if}
                         <!-- {/foreach} -->
                         <!-- {/foreach} -->
-
                     </ul>
                 </div>
-
                 <div class="help-title" id="topNavigate" >{$article.title}</div>
-
                 <div class="detail help-list" id="artricleText">
                     {rc_stripslashes($article.content)}
                 </div>
-
             </div>
             {/if}
+
 
             {if $smarty.get.show eq 'friendlink'}
             <div id="rightContent" class="help-right">
                 <div>
                     <ul class="crumb clearfix">
                         <li><a href='{url path="article/info/init"}'>关于我们</a> <i>&gt;</i></li>
-
                         <li id="help_one" class="last-one">友情链接</li>
-
                     </ul>
                 </div>
-
                 <div class="help-title" id="topNavigate" style="margin-bottom: 20px" >友情链接</div>
-
                 <div class="detail help-list" id="artricleText">
                     <ul>
                         {foreach $friendlink_list as $link}
@@ -98,9 +76,9 @@
                         {/foreach}
                     </ul>
                 </div>
-
             </div>
             {/if}
+
 
         </div>
     </div>

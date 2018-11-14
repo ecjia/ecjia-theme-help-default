@@ -1,22 +1,7 @@
-{nocache}
 <!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="Keywords" content="{$keywords}" />
-    <meta name="Description" content="{$description}" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <!-- TemplateBeginEditable name="doctitle" -->
-    <title>{$page_title}</title>
-    <!-- TemplateEndEditable -->
-    <!-- TemplateBeginEditable name="head" -->
-    <!-- TemplateEndEditable -->
-    <link rel="shortcut icon" href="" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/tools1200.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/base.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/infomationCenter.css" />
-    <link rel="stylesheet" type="text/css" href="{$theme_url}css/footer1200.css" />
-    <script type="text/jscript" src="{$theme_url}js/jquery-1.8.2.min.js"></script>
+    <!-- #BeginLibraryItem "/library/tag_head.lbi" --><!-- #EndLibraryItem -->
 </head>
 
 <body class="w1200">
@@ -25,8 +10,7 @@
 
 <div class="wrap-bg">
     <div class="wrap">
-        <div style="" class="info-block help clearfix" id="helpaa">
-
+        <div class="info-block help clearfix" id="helpaa">
             <div id="leftMenu" class="help-left">
                 <!-- {foreach $article_list as $article_list_cat} -->
                 <input id="help_onekey" type="hidden" value="新闻公告">
@@ -41,9 +25,9 @@
                 <!-- {/foreach} -->
             </div>
 
+
             {if $smarty.get.show neq 'detail'}
             <div class="help-right new-block-list" id="newNavigate">
-
                 <div>
                     <ul class="crumb clearfix">
                         <li><a href='{url path="article/notice/init"}'>商城公告</a> <i>&gt;</i></li>
@@ -68,10 +52,8 @@
                         {/if}
                         <!-- {/foreach} -->
                         <!-- {/foreach} -->
-
                     </ul>
                 </div>
-
             </div>
             {/if}
 
@@ -81,7 +63,6 @@
                 <div>
                     <ul class="crumb clearfix">
                         <li><a href='{url path="article/notice/init"}'>商城公告</a> <i>&gt;</i></li>
-
                         <!-- {foreach $article_list as $article_list_cat} -->
                         <!-- {foreach $article_list_cat.article as  $article_list_child_cat} -->
                         <!-- {foreach $article_list_child_cat as  $article_cat} -->
@@ -91,19 +72,16 @@
                         <!-- {/foreach} -->
                         <!-- {/foreach} -->
                         <!-- {/foreach} -->
-
                     </ul>
                 </div>
-
                 <div class="help-title" id="topNavigate" >{$article.title}</div>
                 <div id="topNavigate" style="margin-bottom: 15px;margin-left: 20px;font-size: 14px;color: #a5a5a5;text-align: center">{RC_Time::local_date('Y-m-d H:i:s', $article.add_time)}</div>
-
                 <div class="detail help-list" id="artricleText">
                     {rc_stripslashes($article.content)}
                 </div>
-
             </div>
             {/if}
+
 
         </div>
     </div>
@@ -111,5 +89,3 @@
 {insert name='page_footer'}
 </body>
 </html>
-{/nocache}
-

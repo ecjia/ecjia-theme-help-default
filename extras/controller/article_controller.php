@@ -139,7 +139,7 @@ class article_controller
 
             $friendlink_list = RC_Api::api('friendlink', 'friendlink_list', array('type' => 'logo'));
             ecjia_front::$controller->assign('friendlink_list', $friendlink_list);
-//dd($friendlink_list);
+
             ecjia_front::$controller->assign_title('关于我们');
         }
 

@@ -19,7 +19,7 @@
     <div class="wrap ">
         <div class="info-header">
             <div class="info-logo">
-                <a href="{$site_index}"> <img src="{$shop_logo}" style="max-height: 60px; max-width: 159px;" alt="{$shop_name}"></a>
+                <a href="{$site_index}"> <img src="{$shop_logo}" alt="{$shop_name}"></a>
             </div>
             <div class="info-menu">
                 <ul>
