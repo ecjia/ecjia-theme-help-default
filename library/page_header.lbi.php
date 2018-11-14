@@ -1,6 +1,7 @@
 <div class="tools">
     <div class="wrap">
         <div class="bl-name" title="{$shop_name}"><div class="txt">Hi，欢迎来到{$shop_name}</div><b></b></div>
+        {if ecjia::config('pc_enabled_member')}
         <div class="tools-right">
             <ul>
                 <li id="user_not_login" class="box">
@@ -11,6 +12,7 @@
                 </li>
             </ul>
         </div>
+        {/if}
     </div>
 </div>
 <div class="infomation">
