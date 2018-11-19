@@ -53,5 +53,6 @@ return [
     'article/help/init'                     => 'article_controller@init',   //帮助中心
     'article/notice/init'                   => 'article_controller@notice',   //平台公告
     'article/info/init'                    => 'article_controller@info',  //关于我们
+    'article/info/friendlink'                    => 'article_controller@friendlink',  //友情链接
 
 ];
