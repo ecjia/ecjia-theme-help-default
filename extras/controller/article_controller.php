@@ -96,7 +96,7 @@ class article_controller
             ecjia_front::$controller->assign_title('帮助中心');
         }
 
-        ecjia_front::$controller->display('article_help.dwt');
+        ecjia_front::$controller->display('article_help.dwt', $cache_id);
     }
 
     public static function info()
@@ -147,7 +147,7 @@ class article_controller
             ecjia_front::$controller->assign_title('关于我们');
         }
 
-        ecjia_front::$controller->display('article_info.dwt');
+        ecjia_front::$controller->display('article_info.dwt', $cache_id);
     }
 
 
@@ -199,7 +199,7 @@ class article_controller
 
             ecjia_front::$controller->assign_title('商家公告');
         }
-        ecjia_front::$controller->display('article_notice.dwt');
+        ecjia_front::$controller->display('article_notice.dwt', $cache_id);
     }
 
 }
