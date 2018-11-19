@@ -21,8 +21,8 @@
                 <p class="menu_head">{$article_list_cat.name}</p>
                 <ul class="menu_body" style="display: none">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
-                    <li style="font-size: 14px;">
-                        <a  href='{url path="article/help/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
+                    <li>
+                        <a  href='{url path="article/help/init"}&aid={$article_list_child_cat.id}' {if $article_list_child_cat.id eq $aid} class='current' {/if}>{$article_list_child_cat.title}</a>
                     </li>
                     <!-- {/foreach} -->
                 </ul>

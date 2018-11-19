@@ -55,7 +55,9 @@ class article_controller
 
         $article_id = trim($_GET['aid']);
         $article_type =   'shop_help';
-        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
+
+        $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type;
+        $cache_id = sprintf('%X', crc32($cache_id));
 
         if (!ecjia_front::$controller->is_cached('article_help.dwt', $cache_id)) {
             $options = array(
@@ -101,7 +103,9 @@ class article_controller
     {
         $article_id = trim($_GET['aid']);
         $article_type =   'shop_info';
-        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
+
+        $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type;
+        $cache_id = sprintf('%X', crc32($cache_id));
 
         if (!ecjia_front::$controller->is_cached('article_info.dwt', $cache_id)) {
             $options = array(
@@ -153,7 +157,8 @@ class article_controller
         $article_type   =   'shop_notice';
         $page_size      =   !empty($_GET['page_size']) ? trim($_GET['page_size']) : 99999999;
 
-        $cache_id = sprintf('%X', crc32($_SERVER['QUERY_STRING']));
+        $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type . '-' .  $page_size;
+        $cache_id = sprintf('%X', crc32($cache_id));
 
         if (!ecjia_front::$controller->is_cached('article_notice.dwt', $cache_id)) {
             $options = array(

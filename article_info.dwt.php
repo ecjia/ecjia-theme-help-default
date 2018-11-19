@@ -21,12 +21,12 @@
                 <p class="menu_head current-header">关于我们</p>
                 <ul  class="menu_body"  style="display: none">
                     <!-- {foreach $article_list_cat.article as $key => $article_list_child_cat} -->
-                    <li style="font-size: 14px;">
-                        <a  href='{url path="article/info/init"}&aid={$article_list_child_cat.id}' style='cursor: pointer;' {if $article_list_child_cat.id eq $aid && $smarty.get.show neq "friendlink"} class='current' {/if}>{$article_list_child_cat.title}</a>
+                    <li>
+                        <a  href='{url path="article/info/init"}&aid={$article_list_child_cat.id}' {if $article_list_child_cat.id eq $aid && $smarty.get.show neq "friendlink"} class='current' {/if}>{$article_list_child_cat.title}</a>
                     </li>
                     <!-- {/foreach} -->
-                    <li style="font-size: 14px;">
-                        <a  href='{url path="article/info/init"}&show=friendlink' style='cursor: pointer;' {if $smarty.get.show eq "friendlink"} class='current' {/if}>友情链接</a>
+                    <li>
+                        <a  href='{url path="article/info/init"}&show=friendlink' {if $smarty.get.show eq "friendlink"} class='current' {/if}>友情链接</a>
                     </li>
                 </ul>
                 <!-- {/foreach} -->
@@ -75,7 +75,7 @@
                         <li id="help_one" class="last-one">友情链接</li>
                     </ul>
                 </div>
-                <div class="help-title" id="topNavigate" style="margin-bottom: 20px" >友情链接</div>
+                <div class="help-title friend-title" id="topNavigate">友情链接</div>
                 <div class="detail help-list" id="artricleText">
                     <ul>
                         {foreach $friendlink_list as $link}
