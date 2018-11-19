@@ -59,7 +59,7 @@ function smarty_insert_page_header($params, Smarty_Internal_Template $template) 
     $shop_name = ecjia::config('shop_name');
     $theme_url = RC_Theme::get_template_directory_uri() . '/';
 
-    $cache_id = $_SERVER['QUERY_STRING'] . '-' .  $shop_logo . '-' .  $shop_name . '-' .  $theme_url;
+    $cache_id = $_SERVER['QUERY_STRING'] . '-' .  $shop_logo . '-' .  $shop_name;
 
     if (!ecjia_front::$controller->is_cached('article_friendlink.dwt', $cache_id)) {
 

@@ -8,12 +8,6 @@
 
 {insert name='page_header'}
 
-<div class="banner help-banner">
-    <div class="help-banner-wp">
-        <a role="button" style="background:url('{$theme_url}images/banner.png') center center no-repeat;"></a>
-    </div>
-</div>
-
 <div class="wrap-bg">
     <div class="wrap">
         <div  class="info-block help clearfix" id="helpaa">
