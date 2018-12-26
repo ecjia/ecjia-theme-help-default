@@ -112,7 +112,7 @@ class article_controller
                 'page_size'     =>  99999999,
                 'article_type'  => $article_type,
                 'sort_order'    => 'ASC',
-                'article_id'    => 'ASC',
+                'sort_by'    => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
@@ -165,7 +165,7 @@ class article_controller
                 'page_size'     =>  $page_size,
                 'article_type'  => $article_type,
                 'sort_order'    => 'ASC',
-                'article_id'    => 'ASC',
+                'sort_by'    => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
@@ -216,7 +216,7 @@ class article_controller
                 'page_size'     =>  $page_size,
                 'article_type'  => $article_type,
                 'sort_order'    => 'ASC',
-                'article_id'    => 'ASC',
+                'sort_by'    => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
@@ -263,7 +263,7 @@ class article_controller
                 'page_size'     =>  99999999,
                 'article_type'  => $article_type,
                 'sort_order'    => 'ASC',
-                'article_id'    => 'ASC',
+                'sort_by'    => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
