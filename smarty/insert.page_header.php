@@ -72,7 +72,7 @@ function smarty_insert_page_header($params, Smarty_Internal_Template $template) 
 
         $site_index = str_replace('/sites/help', '', RC_Uri::home_url());
         $site_login = ecjia_member_uri::login_url();
-        $site_member = ecjia_member_uri::login_url();
+        $site_member = ecjia_member_uri::home_url();
         $site_register = ecjia_member_uri::register_url();
         $url_order = ecjia_member_uri::user_order_url();
         
