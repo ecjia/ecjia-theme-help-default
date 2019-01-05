@@ -7,7 +7,7 @@
             <ul>
                 <li id="user_not_login" class="box">
                     <div>
-                        <a href="{$site_register}" target="_blank" class=""><span>会员中心</span></a>
+                        <a href="{$site_member}" target="_blank" class=""><span>会员中心</span></a>
                         <a href="{$url_order}" target="_blank" class=""><span>我的订单</span></a>
                     </div>
                 </li>
