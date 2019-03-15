@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 通用帮助中心模板 1.26.0\n"
 "Report-Msgid-Bugs-To: https://www.ecjia.com/support/theme/default\n"
-"POT-Creation-Date: 2019-03-13 09:45:31+00:00\n"
+"POT-Creation-Date: 2019-03-15 01:49:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,6 +49,7 @@ msgstr ""
 #: sites/help/content/themes/default/article_detail.dwt.php:20
 #: sites/help/content/themes/default/article_detail.dwt.php:21
 #: sites/help/content/themes/default/article_detail.dwt.php:36
+#: sites/help/content/themes/default/library/page_header.lbi.php:33
 #: sites/help/content/themes/default/article_notice.dwt.php:16
 #: sites/help/content/themes/default/article_notice.dwt.php:17
 #: sites/help/content/themes/default/article_notice.dwt.php:20
