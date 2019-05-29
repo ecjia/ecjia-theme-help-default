@@ -180,7 +180,7 @@ class article_controller
                 $article_list[$row['cat_id']]['article'][$row['month']][$key]['date']           = $row['date'];
                 $article_list[$row['cat_id']]['article'][$row['month']][$key]['short_title']   = ecjia::config('article_title_length') > 0 ? RC_String::sub_str($row['title'], ecjia::config('article_title_length')) : $row['title'];
             }
-            $date = !empty($_GET['date']) ? RC_Purifier::clean($_GET['date'], 'input') : head(array_keys(head($article_list)['article']));
+            $date = !empty($_GET['date']) ? remove_xss($_GET['date']) : head(array_keys(head($article_list)['article']));
 
             if (!is_ecjia_error($article_list)) {
                 ecjia_front::$controller->assign('article_list', $article_list);
@@ -230,7 +230,7 @@ class article_controller
                 $article_list[$row['cat_id']]['article'][$row['month']][$key]['date']           = $row['date'];
                 $article_list[$row['cat_id']]['article'][$row['month']][$key]['short_title']   = ecjia::config('article_title_length') > 0 ? RC_String::sub_str($row['title'], ecjia::config('article_title_length')) : $row['title'];
             }
-            $date = !empty($_GET['date']) ? RC_Purifier::clean($_GET['date'], 'input') : head(array_keys(head($article_list)['article']));
+            $date = !empty($_GET['date']) ? remove_xss($_GET['date']) : head(array_keys(head($article_list)['article']));
 
             if (!is_ecjia_error($article_list)) {
                 ecjia_front::$controller->assign('article_list', $article_list);
