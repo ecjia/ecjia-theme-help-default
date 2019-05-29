@@ -53,7 +53,7 @@ class article_controller
     public static function init()
     {
 
-        $article_id = trim($_GET['aid']);
+        $article_id = intval($_GET['aid']);
         $article_type =   'shop_help';
 
         $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type;
@@ -101,7 +101,7 @@ class article_controller
 
     public static function info()
     {
-        $article_id = trim($_GET['aid']);
+        $article_id = intval($_GET['aid']);
         $article_type =   'shop_info';
 
         $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type;
@@ -131,7 +131,7 @@ class article_controller
                 ecjia_front::$controller->assign('article_list', $article_list);
             }
 
-            if(empty($article_id)) {
+            if (empty($article_id)) {
                 $article_id = (head(head($article_list)['article'])['id']);
             }
 
@@ -153,19 +153,19 @@ class article_controller
 
     public static function notice()
     {
-        $article_id     = trim($_GET['aid']);
-        $article_type   =   'shop_notice';
-        $page_size      =   !empty($_GET['page_size']) ? trim($_GET['page_size']) : 99999999;
+        $article_id     = intval($_GET['aid']);
+        $article_type   = 'shop_notice';
+        $page_size      = !empty($_GET['page_size']) ? intval($_GET['page_size']) : 99999999;
 
         $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type . '-' .  $page_size;
         $cache_id = sprintf('%X', crc32($cache_id));
 
         if (!ecjia_front::$controller->is_cached('article_notice.dwt', $cache_id)) {
             $options = array(
-                'page_size'     =>  $page_size,
+                'page_size'     => $page_size,
                 'article_type'  => $article_type,
                 'sort_order'    => 'DESC',
-                'sort_by'    => 'add_time',
+                'sort_by'       => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
@@ -204,9 +204,9 @@ class article_controller
 
     public static function detail()
     {
-        $article_id     = trim($_GET['aid']);
-        $article_type   =   'shop_notice';
-        $page_size      =   !empty($_GET['page_size']) ? trim($_GET['page_size']) : 99999999;
+        $article_id     = intval($_GET['aid']);
+        $article_type   = 'shop_notice';
+        $page_size      = !empty($_GET['page_size']) ? intval($_GET['page_size']) : 99999999;
 
         $cache_id = $_SERVER['QUERY_STRING'] . '-' . $article_id . '-' .  $article_type . '-' .  $page_size;
         $cache_id = sprintf('%X', crc32($cache_id));
@@ -216,14 +216,13 @@ class article_controller
                 'page_size'     =>  $page_size,
                 'article_type'  => $article_type,
                 'sort_order'    => 'DESC',
-                'sort_by'    => 'add_time',
+                'sort_by'       => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
 
             $article_list = array();
-            foreach($data['arr'] as $key => $row)
-            {
+            foreach($data['arr'] as $key => $row) {
                 $article_list[$row['cat_id']]['name']                                           = $row['cat_name'];
                 $row['month']                                                                   = RC_Time::local_date('Y-m', $row['add_time']);    ;
                 $article_list[$row['cat_id']]['article'][$row['month']][$key]['id']             = $row['article_id'];
@@ -263,14 +262,13 @@ class article_controller
                 'page_size'     =>  99999999,
                 'article_type'  => $article_type,
                 'sort_order'    => 'DESC',
-                'sort_by'    => 'add_time',
+                'sort_by'       => 'add_time',
             );
 
             $data = RC_Api::api('article', 'article_list', $options);
 
             $article_list = array();
-            foreach($data['arr'] as $key => $row)
-            {
+            foreach($data['arr'] as $key => $row) {
                 $article_list[$row['cat_id']]['name']   = $row['cat_name'];
                 $article_list[$row['cat_id']]['article'][$key]['id']    = $row['article_id'];
                 $article_list[$row['cat_id']]['article'][$key]['title'] = $row['title'];
